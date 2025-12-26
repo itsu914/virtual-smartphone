@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>仮想スマホサイト - デモ</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>仮想スマホサイト（デモ）</h1>
+    <div class="controls">
+      <button id="createPhone">端末を作成</button>
+      <button id="create10">一括+10台</button>
+      <select id="themeSelect">
+        <option value="android">Android風</option>
+        <option value="ios">iPhone風</option>
+      </select>
+      <select id="sizeSelect">
+        <option value="normal">通常</option>
+        <option value="large">大型</option>
+        <option value="small">小型</option>
+      </select>
+      <span>合計: <span id="count">0</span> 台</span>
+    </div>
+  </header>
+
+  <main id="phones" class="phones"></main>
+
+  <aside class="server-config">
+    <h3>サーバ設定（任意）</h3>
+    <input id="serverUrl" placeholder="ws://localhost:3000" />
+    <button id="connectServer">サーバ接続</button>
+    <div id="serverStatus">未接続</div>
+  </aside>
+
+  <script src="app.js"></script>
+</body>
+</html>
